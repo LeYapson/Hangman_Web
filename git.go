@@ -35,7 +35,7 @@ func handle(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	fmt.Println("http server up!")
+	fmt.Println("http server up at port 8081!")
 	http.Handle(
 		"/static/",
 		http.StripPrefix(
@@ -44,5 +44,5 @@ func main() {
 		),
 	)
 	http.HandleFunc("/", handle)
-	http.ListenAndServe(":0", nil)
+	http.ListenAndServe(":8081", nil)
 }
