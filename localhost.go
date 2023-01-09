@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-func main() {
+func localhost() {
 	fmt.Print("starting a local host on port 8080.", "\n")
 	fmt.Print("\n", "enjoy your game 0w0")
 	http.Handle("/", http.FileServer(http.Dir("static")))
