@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-func main() { // permet de lancer le local host et charger les page web
+func main() { // permet de lancer le localhost et charger les pages web
 	http.HandleFunc("/", Home)
 	http.HandleFunc("/game", Game)
 	localhost()
