@@ -5,15 +5,15 @@ import (
 	"text/template"
 )
 
-func Home(w http.ResponseWriter, r *http.Request) { // affiche les page
+func Home(w http.ResponseWriter, r *http.Request) { // affiche la page d'accueil
 	Rendertemplate(w, "home")
 }
 
-func Game(w http.ResponseWriter, r *http.Request) { // Hangman web
+func Game(w http.ResponseWriter, r *http.Request) { // affiche la page contenant le jeu
 	Rendertemplate(w, "game")
 }
 
-func Rendertemplate(w http.ResponseWriter, tmpl string) { // Cherche le rendu de la template dans les fichiers
+func Rendertemplate(w http.ResponseWriter, tmpl string) { // Cherche le rendu des templates dans les fichiers
 	t, err := template.ParseFiles("./templates/" + tmpl + ".page.tmpl")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)

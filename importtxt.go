@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func ImportTxt() []string { //importe le fichier contenant le hangman
+func ImportTxt() []string { //importe le fichier contenant les mots
 	var word []string
 
 	readFile, _ := os.Open("hangman.txt")

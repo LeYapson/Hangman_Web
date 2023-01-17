@@ -6,7 +6,15 @@
             body {
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(4, 53, 70);
+    background-color: #443a7c;
+  }
+  .center {
+    text-align: center;
+    color: aliceblue;
+  }
+  .center2 {
+    text-align: center;
+    color: rgb(0, 0, 0);
   }
   h1 {
     color: rgb(255, 255, 255);
@@ -29,7 +37,7 @@
 
 input,
 label {
-    margin: 0.4rem 0;
+    margin-left: 047%;
     
 }
 
@@ -41,19 +49,16 @@ label {
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     cursor: pointer;
+    margin-top: 35%;
   }
         </style>
         
     </head>
     <body>
-        <body background="Sans_titre.png"></body>
-        <h1><center>The Game</center></h1>
-        <h2><center>this is the second page bro, enjoy</center></h2>
-        <label for="name"><p>écris une lettre :</p></label>
-
-<input type="text" id="name" name="name" required
-       minlength="0" maxlength="1" size="10"><br>
-       <div></div><br>
+        <h1 class="center">The Game</h1>
+        <h2 class="center">this is the second page bro, enjoy</h2>
+        <label for="answer"><p>écris une lettre :</p></label>
+<input type="text" id="answer" name="answer" required minlength="0" maxlength="1" size="10"><br>
         <a href="home.page.tmpl" class="btn">Go back to HOME</a>
     </body>
 </html>
