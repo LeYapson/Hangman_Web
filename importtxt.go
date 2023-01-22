@@ -8,7 +8,7 @@ import (
 func ImportTxt() []string { //importe le fichier contenant les mots
 	var word []string
 
-	readFile, _ := os.Open("hangman.txt")
+	readFile, _ := os.Open("words.txt")
 
 	fileScanner := bufio.NewScanner(readFile)
 
