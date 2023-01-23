@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+{{ template "head" . }}
+<body>
+    <h1 class="text-center">Hangman-web</h1>
+
+	<div class="window">
+		<div class="topbar">
+			<div class="title text-center">
+				Hangman web - Difficulty choice
+			</div>
+			<div class="buttons">
+				<div class="green">
+					<a class="rickroll" href="https://www.youtube.com/watch?v=06rM3wqb0yY&ab_channel=T%C3%A9oLavabo" target="_blank"></a>
+				</div>
+				<div class="yellow">
+					<a class="rickroll" href="https://www.youtube.com/watch?v=5NII2j-llWo&ab_channel=Giusseppe" target="_blank"></a>
+				</div>
+				<div class="red">
+					<a class="rickroll" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"></a>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<p class="text-center">Choisissez votre difficulté</p>
+			<div class="choices">
+				<!--<form action="/reset" method="POST">
+					<button type="submit" class="button choice" name="difficulty" value="easy">EZ : trop simple pour ne pas trouver</button>-->
+				</form>
+				<form action="/reset" method="POST">
+					<button type="submit" class="button choice" name="difficulty" value="medium">Classic : le jeu basique quoi</button>
+				</form>
+						<button type="submit" class="button choice" onclick="window.location.href='https://www.youtube.com/watch?v=WQSkEAibovQ&ab_channel=mewhenthe'; " target="_blank" name="difficulty" value="hard" >! OHIO !</button>
+						
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="bottom">
+		<p class="credits text-center">Projet par Théau Yapi, Yanisse ISMAILI</p>
+	</div>
+</body>
+</html>

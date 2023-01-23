@@ -1,13 +1,27 @@
 package main
 
 import (
-	//"github.com/sinjin314/hangman-classic"
+	"fmt"
+	hangmanweb "hangmanweb/controller"
 	"net/http"
 )
 
-func main() { // permet de lancer le localhost et charger les pages web
-	http.HandleFunc("/", Home)
-	http.HandleFunc("/game", Game)
-	localhost()
+func main() {
+	hangmanweb.RandInit()
+	// Creating our main object that stores all of our players and all of the scores
+	players := hangmanweb.Players{Users: map[string]*hangmanweb.UserData{}, Scores: [][]string{}}
+	//players.Scores = hangmanweb.Load()
 
+	fsCss := http.FileServer(http.Dir("./view/assets"))
+	http.Handle("/assets/", http.StripPrefix("/assets/", fsCss))
+
+	http.HandleFunc("/", players.IndexHandler)
+	http.HandleFunc("/hangman", players.HangmanHandler)
+	http.HandleFunc("/reset", players.ResetHandler)
+
+	fmt.Println("[INFO] - Starting the server...")
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		fmt.Println("[ERROR] - Server could not start properly.\n ", err)
+	}
 }
