@@ -16,8 +16,10 @@
                 </div>
                 <div class="buttons">
                     <div class="green">
+                        <a class="rickroll" href="https://www.youtube.com/watch?v=06rM3wqb0yY&ab_channel=T%C3%A9oLavabo" target="_blank"></a>
                     </div>
                     <div class="yellow">
+                        <a class="rickroll" href="https://www.youtube.com/watch?v=5NII2j-llWo&ab_channel=Giusseppe" target="_blank"></a>
                     </div>
                     <div class="red">
                         <a class="rickroll" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"></a>
@@ -27,7 +29,7 @@
             <div class="content">
                 <p id="current-word" class="text-center">{{ .Current }}</p>
                 {{if .IsRunning}}
-                    <form action="/hangman" method="POST" autocomplete="off"> <!-- MERCI RAPHAEL !!!!!!!!!-->
+                    <form action="/hangman" method="POST" autocomplete="off"> 
                         <label for="entry">-> </label>
                         <input type="text" class="entry" name="entry" autofocus />
                         <input class="button" type="submit" value="Envoyer" />
@@ -47,7 +49,6 @@
                     <form action="/reset" method="POST">
                         <input class="button replay" type="submit" value="Rejouer !" />
                     </form>
-                    <p class="text-center"><a href="/leaderboard">Voir le LeaderBoard</a></p>
                 {{end}}
 
                 {{if .BadChar}}

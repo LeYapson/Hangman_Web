@@ -18,7 +18,7 @@ Ce projet Hangman Web a été entretenu par Luka GARCIA, Thomas WEBER et Pierre-
 
 Le projet Hangman Web est un projet dont le but est de recréer le jeu du pendu sur une interface web en utilisant un langage imposé : le [Golang](https://go.dev/).
 
-Nous avons choisi de suivre la charte graphique de Ytrack, la plateforme de gestion de projets d'Ynov, mélée à une idée de terminal, pour rappeler notre ancien projet [hangman](https://github.com/LukaGrc/Hangman).
+Nous avons choisi de suivre la charte graphique de Ytrack, la plateforme de gestion de projets d'Ynov, mélée à une idée de terminal.
 
 ## II. Utilisation de Hangman Web
 
@@ -56,3 +56,5 @@ Chaque fois que l'on émet une suggestion mauvaise (mauvaise lettre / mauvais mo
 ## IV. Crédits
 
 Le projet Hangman Web a été conçu par Luka GARCIA, Thomas WEBER et Pierre-Hervé POIRIER (avec l'aide précieuse des mentors qui nous ont accompagnés).
+
+test
