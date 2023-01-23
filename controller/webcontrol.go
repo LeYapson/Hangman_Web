@@ -68,30 +68,30 @@ func (players *Players) IndexHandler(w http.ResponseWriter, req *http.Request) {
 		else, it'll display the current hangman game
 	*/
 	// Cookie check
-	cookie, noCookie := req.Cookie("username")
+	/*cookie, noCookie := req.Cookie("username")
 	if noCookie != nil {
 		parsedTemplate, _ := template.ParseFiles(RegisterPage...)
 		parsedTemplate.Execute(w, nil)
 		return
-	}
+	}*/
 
 	// Cookie check
-	username := cookie.Value
+	/*username := cookie.Value
 	if players.Users[username] == nil {
 		parsedTemplate, _ := template.ParseFiles(DifficultyPage...)
 		parsedTemplate.Execute(w, nil)
 		return
-	}
+	}*/
 
 	// Game display
-	currentPlayer := players.Users[username]
+	/*currentPlayer := players.Users[username]
 	parsedTemplate, _ := template.ParseFiles(PlayPage...)
 	UpdateDisplay(currentPlayer.Game, currentPlayer.Display)
 	err := parsedTemplate.Execute(w, currentPlayer.Display)
 	if err != nil {
 		fmt.Println("[ERROR] - Error while executing template :", err)
 		return
-	}
+	}*/
 }
 
 func (players *Players) HangmanHandler(w http.ResponseWriter, req *http.Request) {
