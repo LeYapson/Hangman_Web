@@ -224,6 +224,8 @@ func (players *Players) HangmanHandler(w http.ResponseWriter, req *http.Request)
 				return
 			}
 		}
+		players.Scores = append(players.Scores, []string{username, strconv.Itoa(*currentPlayer.MMR)})
+		Save(players.Scores)
 	}
 
 	http.Redirect(w, req, "/", http.StatusTemporaryRedirect)
@@ -285,4 +287,51 @@ func (players *Players) ResetHandler(w http.ResponseWriter, req *http.Request) {
 
 	players.Users[cookie.Value].Game.Difficulty = difficulty
 	http.Redirect(w, req, "/", http.StatusTemporaryRedirect)
+}
+
+func (players *Players) Register(w http.ResponseWriter, req *http.Request) {
+	/*
+		Method of Players
+		This function is the handler of the "register" path of the website.
+		We are checking if the method is POST (if not, an error is diplayed)
+		This simply creates a simple register form with error gestion (username already existing...).
+	*/
+	// Method check
+	if req.Method != "POST" {
+		errorText := fmt.Sprintf("%v - %v", http.StatusMethodNotAllowed, http.StatusText(http.StatusMethodNotAllowed))
+		http.Error(w, errorText, http.StatusMethodNotAllowed)
+		return
+	}
+
+	req.ParseForm()
+	username := req.Form.Get("username")
+	if username == "" {
+		DisplayErrorPage(w, "Please enter an username.", RegisterPage)
+		return
+	}
+
+	if len(username) < 3 {
+		DisplayErrorPage(w, "Username is too short.", RegisterPage)
+		return
+	}
+
+	for key := range players.Users {
+		if username == key {
+			DisplayErrorPage(w, "Username already exists.", RegisterPage)
+			return
+		}
+	}
+
+	http.SetCookie(w, &http.Cookie{Name: "username", Value: username})
+	fmt.Println("[INFO] - New player : ", username)
+	http.Redirect(w, req, "/", http.StatusTemporaryRedirect)
+}
+
+func (players *Players) LeaderBoardHandler(w http.ResponseWriter, req *http.Request) {
+	/*
+		Method of Players
+		simply send the leaderboard page.
+	*/
+	parsedTemplate, _ := template.ParseFiles(LeaderBoardPage...)
+	parsedTemplate.Execute(w, players)
 }
