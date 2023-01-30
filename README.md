@@ -8,9 +8,10 @@ Ce projet Hangman Web a été entretenu par Théau YAPI et Yanisse ISMAILI
 - [II. Utilisation de Hangman Web](#ii-utilisation-de-hangman-web)
 - [III. Réalisation des consignes & bonus](#iii-réalisation-des-consignes-bonus)
     - [A. Consignes requises](#a-consignes-requises)
-    - [B. Bonus 1 : level](#b-bonus-1-level)
-    - [C. Bonus 2 : gamify](#c-bonus-2-gamify)
-    - [D. Bonus 3 : bring-to-death](#d-bonus-3-bring-to-death)
+    - [B. Partie 1 : level](#b-Partie-1-level)
+    - [C. Partie 2 : gamifier-l'interface](#c-Partie-2-gamifier-l'interface)
+    - [D. Partie 3 : bring-to-death](#d-Partie-3-bring-to-death)
+    - [E. Partie 4 : Bonus](#e-Partie-4-Bonus)
 - [IV. Crédits](#iv-crédits)
 
 
@@ -35,7 +36,7 @@ La consigne principale était de créer une interface web proposant de jouer au 
 
 ### B. Partie 1 : level
 
-La partie "level" consiste dans l'ajout d'un choix de difficulté avant de commencer une partie : il nous est demandé d'implémenter une page dédiée au début de la partie qui permet à l'utilisateur de choisir entre trois difficultés (Classic et ! OHIO !).
+La partie "level" consiste dans l'ajout d'un choix de difficulté avant de commencer une partie : nous avons implémenter une page dédiée au début de la partie qui permet à l'utilisateur de choisir entre trois difficultés (Classic et ! OHIO !).
 
 ---
 
@@ -52,6 +53,14 @@ Nous avons donc décidés de créer de nouvelles interfaces telles que : une pag
 La Partie "bring-to-death" consiste en la création d'un pendu qui s'actualise au fur-et-à-mesure du jeu, afin de rendre plus visuel le nombre d'essais restants.
 
 Chaque fois que l'on émet une suggestion mauvaise (mauvaise lettre / mauvais mot), le pendu apparaît de plus en plus.
+
+---
+
+### E. Partie 4 : Bonus
+
+Cette partie consiste en l'ajout de quelques easter-eggs partout sur le projet. tous les easters-eggs présent sont des boutons visibles sur les pages. à vous de découvrir vers où ils mènent.
+
+---
 
 ## IV. Crédits
 
