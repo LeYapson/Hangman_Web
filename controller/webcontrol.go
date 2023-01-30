@@ -326,12 +326,3 @@ func (players *Players) Register(w http.ResponseWriter, req *http.Request) {
 	fmt.Println("[INFO] - New player : ", username)
 	http.Redirect(w, req, "/", http.StatusTemporaryRedirect)
 }
-
-func (players *Players) LeaderBoardHandler(w http.ResponseWriter, req *http.Request) {
-	/*
-		Method of Players
-		simply send the leaderboard page.
-	*/
-	parsedTemplate, _ := template.ParseFiles(LeaderBoardPage...)
-	parsedTemplate.Execute(w, players)
-}

@@ -19,7 +19,6 @@ func main() {
 	http.HandleFunc("/register", players.Register)
 	http.HandleFunc("/hangman", players.HangmanHandler)
 	http.HandleFunc("/reset", players.ResetHandler)
-	http.HandleFunc("/leaderboard", players.LeaderBoardHandler)
 
 	fmt.Println("[INFO] - Starting the server...")
 	err := http.ListenAndServe(":8080", nil)
