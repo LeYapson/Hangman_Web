@@ -19,7 +19,7 @@ Ce projet Hangman Web a été entretenu par Théau YAPI et Yanisse ISMAILI
 
 Le projet Hangman Web est un projet dont le but est de recréer le jeu du pendu sur une interface web en utilisant un langage imposé : le [Golang](https://go.dev/).
 
-Nous avons choisi de suivre la charte graphique de Ytrack, la plateforme de gestion de projets d'Ynov, mélée à une idée de terminal.
+Nous avons choisi de suivre la charte graphique de Ytrack, la plateforme de gestion de projets d'Ynov, mêlée à une idée de terminal.
 
 ## II. Utilisation de Hangman Web
 
